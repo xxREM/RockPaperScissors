@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="stylesheet.css">
     <script>
         let a;
         var name;
@@ -27,6 +28,9 @@
                 return playerChoice;
         }
         name = window.prompt("Enter your name: ");
+        if (name === "") {
+            name = "User";
+        }
         alert("Hello "+name+", let's play Rock, Paper, Scissors! Best 3 out of 5!");
         var numWins = 0;
         var compWins = 0;
@@ -90,6 +94,9 @@
 
 </head>
 <body>
-    1
+    <h1>
+    Welcome to Hanz's Rock Paper Scissors Game!<br>
+    Enjoy!
+    </h1>
 </body>
 </html>
