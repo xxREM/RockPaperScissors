@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let a;
+        var name;
+        
+        function computerPlay() {
+            let x;
+            let ans = null;
+            x = Math.floor((Math.random() * 100));
+            if (x<=33) {
+                ans = "rock";
+            }
+            else if (x>33 && x<66) {
+                ans = "paper";
+            }
+            else {
+                ans = "scissors";
+            }
+            return ans;
+        }
+        function playerPlay() {
+            var playerChoice = null;
+            playerChoice = window.prompt("Choose: Rock, Paper or Scissors?");
+            playerChoice = playerChoice.toLowerCase();
+                return playerChoice;
+        }
+        name = window.prompt("Enter your name: ");
+        alert("Hello "+name+", let's play Rock, Paper, Scissors! Best 3 out of 5!");
+        var numWins = 0;
+        var compWins = 0;
+        while (numWins<3 && compWins<3) {
+            let x = computerPlay();
+            let y = playerPlay();
+            if (y === "rock") {
+                if (y===x) {
+                    alert("Both chose "+y+", try again!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                } else if (x === "paper") {
+                    compWins++;
+                    alert("Paper beats Rock! Computer wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                } else {
+                    numWins++;
+                    alert("Rock beats Scissors! "+name+" wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                }
+            }
+            if (y === "paper") {
+                if (y===x) {
+                    alert("Both chose "+y+", try again!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                } else if (x === "rock") {
+                    numWins++;
+                    alert("Paper beats Rock! "+name+" wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                } else {
+                    compWins++;
+                    alert("Scissors beats Paper! Computer wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                    
+                }
+            }
+            if (y === "scissors") {
+                if (y===x) {
+                    alert("Both chose "+y+", try again!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                } else if (x === "rock") {
+                    compWins++;
+                    alert("Rock beats Scissors! Computer wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                    ;
+                } else {
+                    numWins++;
+                    alert("Scissors beats Paper! "+name+" wins!\n"+name+": "+numWins+"\nComputer: "+compWins);
+                }
+            }
+        }
+        if (numWins = 3) {
+            alert("Congratulations! You win!");
+        }
+        else {
+            alert("Computer wins!");
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    1
+</body>
+</html>
